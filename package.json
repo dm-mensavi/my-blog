@@ -1,0 +1,36 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "A personal blog for posting daily activities",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dm-mensavi/my-blog.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "ejs",
+    "backend",
+    "desktop",
+    "opensource"
+  ],
+  "author": "Mensavi David Mawuli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dm-mensavi/my-blog/issues"
+  },
+  "homepage": "https://github.com/dm-mensavi/my-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
