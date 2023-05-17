@@ -4,10 +4,21 @@
 <h1>Home</h1>
 <p><%= homeStartingContent %></p>
 
-<% posts.forEach((post) => { %>
-  <h1><%= post.title %></h1>
-  <p><%= post.content %></p>
-  <% }) %>
+<div class="my-3">
+  <p> To add a blog post, click the the button below </p>
+  <a class="btn btn-primary" href="/compose">Compose</a>
+</div>
 
+<div>
+  <% posts.forEach((post) => { %>
+    <h1><%= post.title %></h1>
+    <p>
+      <%= post.content.substring(0, 150) %> ... 
+      <a href='<%= '/posts/'+post.title%>' >read more</a>
+    </p>
+    
+    <% }) %>
+  </div>
+  
 
 <%- include('partials/footer.ejs') %>
