@@ -11,15 +11,41 @@ const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rho
 const app = express();
 
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+let posts = [];
 
+app.get('/', (req, res) => {
 
+  res.render('home', {homeStartingContent, posts});
+} );
 
+app.get('/about', (req, res) => {
+  res.render('about', {aboutContent});
+} );
 
+app.get('/contact', (req, res) => {
+  res.render('contact', {contactContent});
+} );
 
+app.get('/compose', (req, res) => {
+
+  res.render('compose');
+} );
+
+app.post('/compose', (req, res) => {
+  const post = {
+    title: req.body.title,
+    content: req.body.content
+  }
+  posts.push(post);
+ 
+  res.redirect('/');
+});
 
 
 
